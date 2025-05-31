@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechMe - Your one-stop shop for all tech needs</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    .notification {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #2ecc71;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 4px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+      z-index: 1001;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    
+    .notification.show {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">TechMe</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Products</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+    <div class="cart-icon" id="cart-icon">
+      <i class="fas fa-shopping-cart"></i>
+      <span id="cart-count">0</span>
+    </div>
+  </header>
+
+  <main>
+    <div class="categories">
+      <button class="category-btn active" data-category="all">All Products</button>
+      <button class="category-btn" data-category="Mobile">Mobiles</button>
+      <button class="category-btn" data-category="Accessories">Accessories</button>
+      <button class="category-btn" data-category="Computers">Computers</button>
+    </div>
+
+    <h1 class="section-title">All Products</h1>
+    
+    <div id="products" class="products-grid"></div>
+  </main>
+
+  <div class="cart-sidebar">
+    <div class="cart-header">
+      <h2>Your Cart</h2>
+      <button class="close-cart">&times;</button>
+    </div>
+    <div id="cart-items"></div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        Total: $<span id="cart-total">0.00</span>
+      </div>
+      <button class="checkout-btn" id="checkout-btn">Pay Now</button>
+    </div>
+  </div>
+
+  <div class="overlay"></div>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>TechMe</h3>
+        <p>Your one-stop shop for all tech needs</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <a href="#">Home</a>
+        <a href="#">Products</a>
+        <a href="#">About Us</a>
+      </div>
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <p>Email: info@techMe.com</p>
+        <p>Phone: +94 76 123 4567</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2025 TechMe. All Rights Reserved.
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
